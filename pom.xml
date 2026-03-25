@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sixestates</groupId>
-    <artifactId>idp-sdk</artifactId>
+    <artifactId>idp-java-jakarta</artifactId>
     <version>8.2.9</version>
     <name>idp</name>
     <description>A Java SDK for communicating with the 6Estates Intelligent Document Processing(IDP) Platform</description>
@@ -18,19 +18,19 @@
         </license>
     </licenses>
 
-<!--    <scm>-->
-<!--        <url>git@github.com:6estates/idp-java.git</url>-->
-<!--        <connection>scm:git:git@github.com:6estates/idp-java.git</connection>-->
-<!--        <developerConnection>scm:git:git@github.com:6estates/idp-java.git</developerConnection>-->
-<!--        <tag>0.0.1</tag>-->
-<!--    </scm>-->
+    <!--    <scm>-->
+    <!--        <url>git@github.com:6estates/idp-java.git</url>-->
+    <!--        <connection>scm:git:git@github.com:6estates/idp-java.git</connection>-->
+    <!--        <developerConnection>scm:git:git@github.com:6estates/idp-java.git</developerConnection>-->
+    <!--        <tag>0.0.1</tag>-->
+    <!--    </scm>-->
 
-<!--    <developers>-->
-<!--        <developer>-->
-<!--            <name>anyangli</name>-->
-<!--            <email>411746630@qq.com</email>-->
-<!--        </developer>-->
-<!--    </developers>-->
+    <!--    <developers>-->
+    <!--        <developer>-->
+    <!--            <name>anyangli</name>-->
+    <!--            <email>411746630@qq.com</email>-->
+    <!--        </developer>-->
+    <!--    </developers>-->
 
     <repositories>
         <repository>
@@ -57,18 +57,19 @@
             <name>Nexus Releases Repository</name>
             <url>https://repos.6estates.com/repository/releases/</url>
         </repository>
-        <snapshotRepository>
-            <id>nexus-snapshot</id> <name>Nexus Snapshots Repository</name>
-            <url>https://repos.6estates.com/repository/snapshots/</url>
-        </snapshotRepository>
+        <!--        <snapshotRepository>-->
+        <!--            <id>nexus-snapshot</id> <name>Nexus Snapshots Repository</name>-->
+        <!--            <url>https://repos.6estates.com/repository/snapshots/</url>-->
+        <!--        </snapshotRepository>-->
     </distributionManagement>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
+        <!--        <java.version>11</java.version>-->
         <jackson.version>2.14.0-rc1</jackson.version>
-<!--        <maven.compiler.source>11</maven.compiler.source>-->
-<!--        <maven.compiler.target>11</maven.compiler.target>-->
-        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <!--        <maven.compiler.source>11</maven.compiler.source>-->
+        <!--        <maven.compiler.target>11</maven.compiler.target>-->
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
     </properties>
 
@@ -80,8 +81,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin.version}</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>21</source>
+                    <target>21</target>
+                    <!--                    <source>11</source>-->
+                    <!--                    <target>11</target>-->
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -101,6 +104,7 @@
 
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
                 <configuration>
                     <archive>
                         <addMavenDescriptor>true</addMavenDescriptor>
@@ -117,7 +121,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>1.18.32</version>
             <scope>provided</scope>
         </dependency>
 
@@ -229,45 +233,45 @@
         -->
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.sonatype.plugins</groupId>-->
-<!--                <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                <version>1.6.7</version>-->
-<!--                <extensions>true</extensions>-->
-<!--                <configuration>-->
-<!--                    <serverId>maven-public</serverId>-->
-<!--                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
-<!--                    <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-source-plugin</artifactId>-->
-<!--                <version>3.2.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>attach-sources</id>-->
-<!--                        <goals>-->
-<!--                            <goal>jar-no-fork</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                <version>3.3.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>attach-javadocs</id>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--       </plugins>-->
-<!--   </build>-->
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.sonatype.plugins</groupId>-->
+    <!--                <artifactId>nexus-staging-maven-plugin</artifactId>-->
+    <!--                <version>1.6.7</version>-->
+    <!--                <extensions>true</extensions>-->
+    <!--                <configuration>-->
+    <!--                    <serverId>maven-public</serverId>-->
+    <!--                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
+    <!--                    <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-source-plugin</artifactId>-->
+    <!--                <version>3.2.1</version>-->
+    <!--                <executions>-->
+    <!--                    <execution>-->
+    <!--                        <id>attach-sources</id>-->
+    <!--                        <goals>-->
+    <!--                            <goal>jar-no-fork</goal>-->
+    <!--                        </goals>-->
+    <!--                    </execution>-->
+    <!--                </executions>-->
+    <!--            </plugin>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+    <!--                <version>3.3.1</version>-->
+    <!--                <executions>-->
+    <!--                    <execution>-->
+    <!--                        <id>attach-javadocs</id>-->
+    <!--                        <goals>-->
+    <!--                            <goal>jar</goal>-->
+    <!--                        </goals>-->
+    <!--                    </execution>-->
+    <!--                </executions>-->
+    <!--            </plugin>-->
+    <!--       </plugins>-->
+    <!--   </build>-->
 </project>

@@ -11,22 +11,20 @@ The documentation for the 6Estates IDP API can be found [here][apidocs].
 
 This library supports the following Java implementations:
 
-* OpenJDK 8
-* OpenJDK 11
-* OracleJDK 8
-* OracleJDK 11
+* OpenJDK 21
 
-For Java 8 support, use idp-sdk major version 8.X.X.
+
+For Java 21 support, use idp-java-jakarta major version 8.X.X.
 ## Installation
 
-### Adding idp-java with Maven.
+### Adding idp-java-jakarta with Maven.
 
 Use the following dependency in your project to grab via Maven:
 
 ```
    <dependency>
       <groupId>com.sixestates</groupId>
-      <artifactId>idp-sdk</artifactId>
+      <artifactId>idp-java-jakarta</artifactId>
       <version>8.2.9</version>
       <scope>compile</scope>
   </dependency>
@@ -34,14 +32,14 @@ Use the following dependency in your project to grab via Maven:
 
 ### Obtaining the latest Jar. 
 
-Please download the jars from [latest version](https://github.com/6estates/idp-java/releases).
+Please download the jars from [latest version](https://github.com/6estates/idp-java-jakarta/releases).
 
 ### Building from source code 
 
 The following is how you can build the jar from source code,
 
-    $ git clone https://github.com/6estates/idp-java.git
-    $ cd idp-java
+    $ git clone https://github.com/6estates/idp-java-jakarta.git
+    $ cd idp-java-jakarta
     $ mvn install       # Requires maven, download from https://maven.apache.org/download.html
 
 If you want to build your own .jar, execute the following from within the cloned directory:

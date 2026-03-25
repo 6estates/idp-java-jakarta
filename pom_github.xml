@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sixestates</groupId>
-    <artifactId>idp-sdk</artifactId>
+    <artifactId>idp-java-jakarta</artifactId>
     <version>8.2.9</version>
     <name>idp</name>
     <description>A Java SDK for communicating with the 6Estates Intelligent Document Processing(IDP) Platform</description>
