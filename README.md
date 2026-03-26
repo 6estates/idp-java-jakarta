@@ -370,6 +370,8 @@ try (InputStream fileStream = DocAgentExample.class.getClassLoader().getResource
 
 ```
 
+For other details, please refer to the classes under the example package
+
 [apidocs]: https://idp-sea.6estates.com/docs#/
 [callbackdocs]: https://idp-sea.6estates.com/docs#/extract/extraction?id=_212-callback-process
 
