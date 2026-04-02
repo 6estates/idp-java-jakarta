@@ -1,4 +1,4 @@
-6Estates idp-java-jakartaigt 
+6Estates idp-java-jakarta 
 ===================
 A Java SDK for communicating with the 6Estates Intelligent Document Processing(IDP) Platform.
 
