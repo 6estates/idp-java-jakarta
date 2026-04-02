@@ -11,7 +11,7 @@ import java.io.File;
 
 public class Example {
 
-    public static final String TOKEN = "sdIx7ihJVeXte/wRogqm3RuAXl8wHQ8Ca/3zbBhvUdZxUQuowc/JkVLrJXDn46hO";
+    public static final String TOKEN = "XXXXXXX";
     public static final String FILE_PATH = "/Users/yecong/Downloads/decrypted.pdf";
 
     /**
