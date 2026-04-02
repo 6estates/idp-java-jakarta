@@ -25,7 +25,7 @@ Use the following dependency in your project to grab via Maven:
    <dependency>
       <groupId>com.sixestates</groupId>
       <artifactId>idp-java-jakarta</artifactId>
-      <version>8.2.9</version>
+      <version>8.2.10</version>
       <scope>compile</scope>
   </dependency>
 ```
@@ -53,16 +53,6 @@ If you run into trouble with local tests, use:
 ## Quickstart
 
 ### Initialize the 6Estates IDP Client
-#### 6E API Access Token(Deprecated)
-``` java
-
-import com.sixestates.Idp;
-
-// Please obtain your access token from 6Estates in advance
-String yourAccessToken = "XXXXXX"; 
-
-Idp.init(yourAccessToken);
-```
 
 #### 6E API Access Token
 ``` java
