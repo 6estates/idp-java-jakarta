@@ -19,6 +19,7 @@ public class Idp {
     private static String token; // customer used if this is null
     private static String authorization; //oauth2.0 authorization token
     private static boolean isOauth; //oauth2.0 authorization token
+//    private static String host = "https://idp.6estates.com/customer";
     private static String host = "https://idp-sea.6estates.com/customer";
     private static String submitUrl = host + "/extraction/fields/async";
     private static String historyListUrl = host + "/extraction/history/list";
@@ -62,7 +63,7 @@ public class Idp {
     private static String documentAgentExportUrl = host + "/extraction/doc_agent/analysis/export";
 
     private static String syncCardExtractionUrl = host + "/extraction/fields/sync/cards";
-
+    private static String aiChatUrl = host + "/extraction/ai/chat";
     private Idp() {}
 
     public static String getFsAgentSubmitUrl() {
@@ -460,5 +461,9 @@ public class Idp {
 
     public static String getHistoryListUrl() {
         return historyListUrl;
+    }
+
+    public static String getAIChatUrl() {
+        return aiChatUrl;
     }
 }
